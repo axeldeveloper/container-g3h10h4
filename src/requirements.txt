@@ -1,7 +1,10 @@
-Flask
-SQLAlchemy
-gunicorn
-
-PyMySQL
-coloredlogs
-python-dotenv
+Flask==2.2.5
+SQLAlchemy==1.4.47
+gunicorn==21.2.0
+PyMySQL==1.0.2
+coloredlogs==15.0.1
+python-dotenv==1.0.0
+pymongo[srv]
+Flask-PyMongo
+# Flask-Cors
+faker==0.8.13

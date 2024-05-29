@@ -1,15 +1,38 @@
 <!doctype html>
 <title>{% block title %}{% endblock %} - Flaskr</title>
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-<nav>
-  <h1>Flaskr</h1>
-</nav>
-<section class="content">
-  <header>
-    {% block header %}{% endblock %}
-  </header>
-  {% for message in get_flashed_messages() %}
-    <div class="flash">{{ message }}</div>
-  {% endfor %}
-  {% block content %}{% endblock %}
-</section>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/output.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+
+
+<body class="max-w-screen-xl mx-auto px-5">
+
+
+  
+  <section class="content p-2 border-gray-200">
+
+    <nav>
+      {% block nav %}{% endblock %}
+    </nav>
+    
+    <header>
+      {% block header %}{% endblock %}
+    </header>
+    
+    {% for message in get_flashed_messages() %}
+      <div class="flash">{{ message }}</div>
+    {% endfor %}
+
+    {% block content %}{% endblock %}
+
+
+    {% block footer %}{% endblock %}
+
+  </section>
+
+
+
+
+</body>
+
+
