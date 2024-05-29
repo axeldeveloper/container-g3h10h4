@@ -1,3 +1,15 @@
+# v0.0.2 (Wed May 29 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feature(test) route cep ([@axeldeveloper](https://github.com/axeldeveloper))
+
+#### Authors: 1
+
+- Axel Alexander ([@axeldeveloper](https://github.com/axeldeveloper))
+
+---
+
 # v0.0.1 (Wed May 29 2024)
 
 :tada: This release contains work from a new contributor! :tada:
