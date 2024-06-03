@@ -11,13 +11,15 @@ DB_PASSWORD = os.getenv("DB_PASSWORD", None)
 DB_HOST = os.getenv("DB_HOST", None)
 DB_PORT = os.getenv("DB_PORT", None)
 DB_NAME = os.getenv("DB_NAME", None)
+DB_SEVER = f"{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}?charset=utf8mb4"
 
 
 def get_db():
     if "db" not in g:
         log.info("Connecting to database")
         engine = create_engine(
-            f"mysql+pymysql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}?charset=utf8mb4",
+            # f"mysql+pymysql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}?charset=utf8mb4",
+            f"mysql+pymysql://{DB_SEVER}",
             pool_pre_ping=True,
         )
 

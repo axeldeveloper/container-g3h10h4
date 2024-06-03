@@ -1,4 +1,11 @@
-# Go forth and build! 🚀
+# Project 
+-
+
+export FLASK_APP=app
+export FLASK_ENV=development
+
+
+ Go forth and build! 🚀
 
 ## Tutorial: How to make your first commit 📹:
 
