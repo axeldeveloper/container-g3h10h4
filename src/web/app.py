@@ -31,14 +31,15 @@ def consultav1(q_data):
     lst_enderecos = []
     resultado = requests.get("https://www.receitaws.com.br/v1/cnpj/" + str(q_data))
     data_endereco = json.loads(resultado.content)
+    cep = data_endereco['cep'].replace('.', '')
     lst_enderecos.append([
         q_data,
         data_endereco['logradouro'],
         data_endereco['numero'],
         data_endereco['municipio'],
         data_endereco['bairro'],
-        data_endereco['uf'], 
-        data_endereco['cep'].replace('.', '').replace('-',''),
+        data_endereco['uf'],
+        cep.replace('-' , ''),
         resultado
     ])
     print(data_endereco)
