@@ -14,6 +14,9 @@ DB_NAME = os.getenv("DB_NAME", None)
 DB_SEVER = f"{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}?charset=utf8mb4"
 
 
+# teste aqui
+
+
 def get_db():
     if "db" not in g:
         log.info("Connecting to database")
